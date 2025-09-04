@@ -8,6 +8,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # This is the crucial line
     steps:
       - uses: actions/checkout@v3
         with:
@@ -28,4 +30,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          cname: username.github.io
+          cname: nanbai2020.github.io # Important: Change this line
